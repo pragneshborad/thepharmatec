@@ -1,0 +1,112 @@
+<header [ngClass]="{ 'hidden': isHeaderHidden }">
+  <div class="position-relative">
+
+    <div class="header_wrapper">
+      <div class="width_60 margin_0_auto">
+        <div class="d_flex align_item_center space_between">
+
+          <div class="header_logo">
+            <a href="/">
+              <img alt="pharmatec" src="assets/images/headerimg/Group 2.svg">
+            </a>
+          </div>
+          <div class="hidden_xs_view">
+            <div class="d_flex_center menu_btn_gap ">
+
+              <div class="header_menu font_16 font_gt_walsheim_regular color_black">
+                <div class="header_menu">
+                  <div class="menu_item color_skyblue" (click)="scrollToSection('features')">Features</div>
+                  <div class="menu_item" (click)="scrollToSection('applications')">Applications</div>
+                  <div class="menu_item" (click)="scrollToSection('solutions')">Solutions</div>
+                  <div class="menu_item" (click)="scrollToSection('pricing')">Pricing</div>
+                  <div class="menu_item" (click)="scrollToSection('about')">About</div>
+                  <div class="menu_item" (click)="scrollToSection('faqs')">FAQs</div>
+                </div>
+              </div>
+
+
+              <div class="buttons_flex_gap">
+                <div class="header_button1 bg_color_skyblue_1 color_black">
+                  <p class="font_36_mo font_gt_walsheim_regular ">Login</p>
+                </div>
+                <div class="header_button2 bg_color_skyblue color_white" (click)="scrollToFooter()">
+                  <p class="font_36_mo font_gt_walsheim_regular">Book A Demo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="visible_xs_view">
+            <div class="d_flex header_last_btn_gap">
+              <a href="" class="header_button1 flex_center cursor_pointer">
+                <p class="font_gt_walsheim_medium  font_16 font_40_mo color_black">
+                  Login</p>
+              </a>
+
+              <div class="menu">
+                <div #menuBtn class="menu-btn" (click)="toggleMenu()">
+                  <span class="menu_bar"></span>
+                  <span class="menu_bar1"></span>
+                  <span class="menu_bar2"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="nav_bar">
+  <div class="d_none">
+    <div class="active">
+      <div #navbarSection class="navbar_section active">
+        <ul class="nav_section_padding">
+          <li class="navbar_sec_li navbar_sec_li_pd">
+            <div class="font_gt_walsheim_regular font_16 font_64_mo color_skyblue hover_color cursor_pointer"
+              (click)="scrollToSection('features')">Features</div>
+          </li>
+          <li class="navbar_sec_li navbar_sec_li_pd">
+            <div class="font_gt_walsheim_regular font_16 font_64_mo color_black hover_color cursor_pointer"
+              (click)="scrollToSection('applications')">Applications</div>
+          </li>
+          <li class="navbar_sec_li navbar_sec_li_pd">
+            <div class="font_gt_walsheim_regular font_16 font_64_mo color_black hover_color cursor_pointer"
+              (click)="scrollToSection('solutions')">Solutions</div>
+          </li>
+          <li class="navbar_sec_li navbar_sec_li_pd">
+            <div class="font_gt_walsheim_regular font_16 font_64_mo color_black hover_color cursor_pointer"
+              (click)="scrollToSection('pricing')">Pricing</div>
+          </li>
+          <li class="navbar_sec_li navbar_sec_li_pd">
+            <div class="font_gt_walsheim_regular font_16 font_64_mo color_black hover_color cursor_pointer"
+              (click)="scrollToSection('about')">About</div>
+          </li>
+          <li class="navbar_sec_li navbar_sec_li_pd">
+            <div class="font_gt_walsheim_regular font_16 font_64_mo color_black hover_color cursor_pointer"
+              (click)="scrollToSection('faqs')">FAQs</div>
+          </li>
+          <div class="flex btn_gap sm_flex_column" (click)="scrollToFooter()">
+            <div class="header_button2 bg_color_skyblue color_white flex_center cursor_pointer">
+              <p class="font_48_mo font_gt_walsheim_regular">Book A Demo</p>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="visible-xs">
+      <div
+        class="inquire_btn mo_header_wrapper"
+        [ngClass]="{'hidden': !isButtonVisible}"
+       (click)="scrollToFooter()">
+        <div class="free_trail_btn flex_center cursor_pointer">
+          <p class="font_gt_walsheim_medium font_16 font_40_mo text_transform color_blue">
+            Request a Demo
+          </p>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+  <div #overlay id="overlay" class="overlay" (click)="closeMenu()"></div>
+</div>
